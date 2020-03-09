@@ -11,10 +11,10 @@ const Buble = (props: any) => {
     (me as any).current.to({
         x,
         y,
-        easing:Konva.Easings['StrongEaseIn'],
+        easing:Konva.Easings['EaseInOut'],
         duration:duration/1000
     });
-    animTimeout = setTimeout(animate, duration);
+    animTimeout = setTimeout(animate, duration+300);
   };
   const animate = () => {
     if(me === null )
@@ -56,7 +56,7 @@ const Background = (props : any) => {
   }
   return (<Layer>
   <Rect width={width} height={height}
-  fill={"#FAA"}
+  fill={"#AAF"}
   />
   {addBubles()}
   </Layer>)
